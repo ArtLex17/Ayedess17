@@ -759,4 +759,141 @@ a:hover {
         font-size: 0.9375rem;
         line-height: 1.6;
     }
+   /* ============================================
+   RESPONSIVE HERO SECTION
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        margin-top: 0;
+    }
+    
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 0;
+        order: 2; /* Le contenu vient après la photo */
+    }
+    
+    .hero-visual {
+        order: 1; /* La photo vient en premier */
+    }
+    
+    .ROI {
+        margin-bottom: 30px; /* Réduire la marge en dessous de la photo */
+        max-width: 60%; /* Ajuster la taille de la photo */
+    }
+    
+    .hero-title {
+        margin-top: 20px;
+    }
+    
+    .hero-description {
+        margin: 0 auto 2rem;
+    }
+    
+    .hero-quote {
+        margin: 0 auto 2rem;
+    }
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px; /* Espace pour la navigation */
+        margin-bottom: 0;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-line {
+        font-size: 40px;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .hero-quote {
+        padding: 1rem;
+    }
+    
+    .hero-quote p {
+        font-size: 1.1rem;
+    }
+    
+    .ROI {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    
+    .avatar-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-line {
+        font-size: 30px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-quote p {
+        font-size: 1rem;
+    }
+    
+    .ROI {
+        max-width: 90%;
+    }
+    
+    .avatar-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Animation d'entrée pour la photo sur mobile */
+@media (max-width: 1024px) {
+    .hero-visual {
+        animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .hero-content {
+        animation: fadeIn 0.8s ease-out 0.3s both;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+}
+
